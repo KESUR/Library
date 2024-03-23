@@ -1,9 +1,24 @@
 # Projekt Bazy Danych
 
 ## Wprowadzenie
-Ten projekt zawiera bazę danych utworzoną przy użyciu phpMyAdmin w środowisku lokalnym. Aby móc korzystać z bazy danych, należy uruchomić XAMPP na swoim komputerze.
+Projekt Wypożyczalni Książek to aplikacja internetowa umożliwiająca użytkownikom przeglądanie dostępnych książek, umawianie terminów wypożyczenia oraz zarządzanie biblioteką. Aplikacja oferuje dwa panele: panel użytkownika i panel pracownika, każdy z odpowiednimi funkcjonalnościami.
 
+## Panel Użytkownika
+Panel użytkownika umożliwia przeglądanie dostępnych książek w wypożyczalni, wyszukiwanie książek według tytułu, autora lub kategorii. Użytkownik może również zarezerwować wybraną książkę na określony termin wypożyczenia. Po zakończeniu wypożyczenia użytkownik może ocenić książkę i zostawić recenzję.
+
+## Panel Pracownika
+Panel pracownika jest przeznaczony dla personelu wypożyczalni. Pracownik ma możliwość dodawania nowych książek do bazy danych wypożyczalni, zarządzania informacjami o czytelnikach, potwierdzania rezerwacji książek oraz wykonywania innych operacji administracyjnych w systemie.
+
+## Funkcje Wypożyczalni
+- Przeglądanie dostępnych książek w bazie danych.
+- Wyszukiwanie książek według różnych kryteriów.
+- Rezerwacja książek na określony termin wypożyczenia.
+- Dodawanie nowych pozycji książkowych do biblioteki.
+- Zarządzanie informacjami o czytelnikach.
+- Potwierdzanie rezerwacji i operacje związane z wypożyczaniem i oddawaniem książek.
+- Możliwość oceny książek oraz dodawania recenzji.
 ## Wymagania
+
 - XAMPP - środowisko do uruchamiania serwera Apache, MySQL oraz interpretera języka PHP. Możesz pobrać XAMPP ze strony [apachefriends.org](https://www.apachefriends.org/index.html).
 
 ## Instrukcje uruchomienia
@@ -20,11 +35,7 @@ Ten projekt zawiera bazę danych utworzoną przy użyciu phpMyAdmin w środowisk
 -- phpMyAdmin SQL Dump
 -- version 5.2.0
 -- https://www.phpmyadmin.net/
---
--- Host: 127.0.0.1
--- Czas generowania: 23 Mar 2024, 11:00
--- Wersja serwera: 10.4.27-MariaDB
--- Wersja PHP: 8.2.0
+
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
