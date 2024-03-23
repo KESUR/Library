@@ -1,0 +1,40 @@
+﻿<Page x:Class="Library.ReaderPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Library"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="890"
+      Title="ReaderPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel Grid.Row="0" Orientation="Horizontal" Margin="5">
+            <TextBox Name="SearchBox" Width="440" VerticalContentAlignment="Center" Margin="0,5,10,5" Text="Wyszukaj..." TextChanged="SearchBox_TextChanged" KeyDown="SearchBox_KeyDown"/>
+            <Button Content="Dodaj Czytelnika" Margin="5" Padding="5" Width="100" Height="30" Background="#2C062C" Foreground="White" BorderThickness="0" Click="AddReader_Click"/>
+            <Button Content="Usuń Czytelnika" Margin="5" Padding="5" Width="100" Height="30" Background="#2C062C" Foreground="White" BorderThickness="0" Click="DelReader_Click"/>
+        </StackPanel>
+
+        <ListView Name="CzytelnicyListView" Grid.Row="1" 
+                  ItemsSource="{Binding}" 
+                  IsSynchronizedWithCurrentItem="True" 
+                  SelectionMode="Single" 
+                  AlternationCount="2" 
+                  Margin="5">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="ID" DisplayMemberBinding="{Binding Id}" Width="50"/>
+                    <GridViewColumn Header="Imię i Nazwisko" DisplayMemberBinding="{Binding ImieNazwisko}" Width="200"/>
+                    <GridViewColumn Header="Nazwa Użytkownika" DisplayMemberBinding="{Binding NazwaUzytkownika}" Width="110"/>
+                    <GridViewColumn Header="Numer Telefonu" DisplayMemberBinding="{Binding NumerTelefonu}" Width="100"/>
+                    <GridViewColumn Header="Wypożyczona Książka" DisplayMemberBinding="{Binding WypozyczonaKsiazka}" Width="210"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Page>

@@ -1,0 +1,21 @@
+﻿<Window x:Class="Library.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library"
+        mc:Ignorable="d"
+        Title="MainWindow" Width="340" Height="300" Background="#666A" ResizeMode="NoResize" Icon="/Icon_Biblioteka.png">
+    <!-- Ustawienie koloru tła dla całego okna -->
+
+    <Grid>
+        <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,213,0,0">
+            <!-- Przycisk dla Użytkownika -->
+            <Button Content="Użytkownik" Width="100" Height="30" Margin="5" Background="DeepPink" Foreground="#ECF0F1" BorderThickness="0" Click="UserButton_Click"/>
+
+            <!-- Przycisk dla Pracownika -->
+            <Button Content="Pracownik" Width="100" Height="30" Margin="5" Background="DeepPink" Foreground="#ECF0F1" BorderThickness="0" Click="EmployeeButton_Click"/>
+        </StackPanel>
+        <Image Margin="20,30,20,154" RenderTransformOrigin="0.427,0.49" Source="/Logo_Biblioteka.png"/>
+    </Grid>
+</Window>

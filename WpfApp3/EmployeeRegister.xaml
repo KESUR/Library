@@ -1,0 +1,32 @@
+﻿<Window x:Class="Library.EmployeeRegister"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library"
+        mc:Ignorable="d"
+        Title="EmployeeRegister" Width="350" Height="400" Background="#666A" ResizeMode="NoResize" Icon="/Icon_Biblioteka.png">
+    <!-- Ustawienie kolru tła dla całego okna -->
+
+    <Grid VerticalAlignment="Top" HorizontalAlignment="Center" Height="155" Margin="0,140,0,0">
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+
+        <TextBox x:Name="txtLogin" Height="30" Text="Username" VerticalContentAlignment="Center" Grid.Row="1" HorizontalAlignment="Center" Margin="10" Width="200" Background="#666A86" Foreground="#ECF0F1" BorderBrush="#2C3E50" KeyDown="txtLogin_KeyDown"/>
+
+        <PasswordBox x:Name="txtPassword" Password="Password" VerticalContentAlignment="Center" Height="30" Grid.Row="3" HorizontalAlignment="Center" Margin="10" Width="200" Background="#666A86" Foreground="#ECF0F1" BorderBrush="#2C3E50" KeyDown="txtPassword_KeyDown"/>
+
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center" Margin="10">
+            <Button Content="Powrót" Background="#2C062C" Foreground="White" Width="100" Margin="0,5,30,0" Height="30" BorderThickness="0" Click="BackButton_Click"/>
+            <Button Content="Login" Width="128" BorderThickness="0" Click="LoginButton_Click" Background="DeepPink" Margin="0,5,0,0" Foreground="#ECF0F1" Height="30" />
+        </StackPanel>
+        
+        <Image Margin="24,-118,25,18" RenderTransformOrigin="0.427,0.49" Source="/Logo_Biblioteka.png"/>
+    </Grid>
+</Window>

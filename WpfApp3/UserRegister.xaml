@@ -1,0 +1,67 @@
+﻿<Window x:Class="Library.UserRegister"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Library"
+        mc:Ignorable="d"
+        Title="UserRegister" Width="600" Height="350" Background="#666A" ResizeMode="NoResize" Icon="/Icon_Biblioteka.png">
+    <!-- Ustawienie koloru tła dla całego okna -->
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </Grid.ColumnDefinitions>
+
+        <!-- Formularz logowania w pierwszej kolumnie -->
+        <Border Grid.Column="0" Background="#666A" Padding="20">
+
+            <StackPanel>
+
+                <Image RenderTransformOrigin="0.427,0.49" Source="/Logo_Biblioteka.png" Margin="0 0 0 10" />
+
+                <TextBox x:Name="txtLogin" Visibility="Visible" Height="30" Text="Username" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0 0 0 10" Width="260" Background="#666A86" Foreground="#ECF0F1" BorderBrush="#2C3E50" KeyDown="txtLogin_KeyDown" TextChanged="txtLogin_TextChanged" />
+
+                <PasswordBox x:Name="txtPassword" Visibility="Visible" Password="Password" VerticalContentAlignment="Center" Height="30" HorizontalAlignment="Left" Margin="0 0 0 10" Width="260" Background="#666A86" Foreground="#ECF0F1" BorderBrush="#2C3E50" KeyDown="txtPassword_KeyDown"/>
+
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left" Margin="0 0 0 10">
+                    <Button x:Name="LoginBtn" Content="Login" Width="260" Click="LoginButton_Click" Background="DeepPink" Foreground="#ECF0F1" BorderBrush="#2C3E50" Height="30" />
+
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Druga kolumna może być używana do innych elementów, np. informacji, reklam, itp. -->
+        <Border Grid.Column="1" Background="#666A" Padding="20">
+            <StackPanel>
+                <!-- TextBox dla pełnej nazwy -->
+                <TextBox x:Name="txtFullName" Visibility="Visible" Height="30" Text="Full Name" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0 0 0 10" Width="260" Background="#666A86" Foreground="#ECF0F1" BorderBrush="#2C3E50" KeyDown="txtFullName_KeyDown" />
+
+                <!-- TextBox dla numeru telefonu -->
+                <StackPanel Orientation="Horizontal" Margin="0 0 0 10">
+                    <ComboBox x:Name="PrefixNumberCB" Width="70" Margin="0 0 10 0" Background="#666A86">
+                        <ComboBoxItem>+48</ComboBoxItem>
+                        <ComboBoxItem>+49</ComboBoxItem>
+                        <!-- Dodaj inne kierunkowe kraju według potrzeb -->
+                    </ComboBox>
+                    <TextBox x:Name="txtPhoneNumber" Visibility="Visible" Height="30" Text="Phone number" VerticalContentAlignment="Center" HorizontalAlignment="Left" Width="180" Background="#666A86" Foreground="#ECF0F1" BorderBrush="#2C3E50" KeyDown="txtPhoneNumber_KeyDown" />
+                </StackPanel>
+
+                <!-- TextBox dla nazwy użytkownika w rejestracji -->
+                <TextBox x:Name="txtRegisterUsername" Visibility="Visible" Height="30" Text="Username" VerticalContentAlignment="Center" HorizontalAlignment="Left" Margin="0 0 0 10" Width="260" Background="#666A86" Foreground="#ECF0F1" BorderBrush="#2C3E50" KeyDown="txtRegisterUsername_KeyDown" TextChanged="txtRegisterUsername_TextChanged" />
+
+                <!-- TextBox dla hasła w rejestracji -->
+                <PasswordBox x:Name="txtRegisterPassword" Visibility="Visible" Password="Password" VerticalContentAlignment="Center" Height="30" HorizontalAlignment="Left" Margin="0 0 0 10" Width="260" Background="#666A86" Foreground="#ECF0F1" BorderBrush="#2C3E50" KeyDown="txtRegisterPassword_KeyDown"/>
+
+                <!-- Przycisk "Zarejestruj się" -->
+                <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                    <Button Content="Register" Width="260" Click="RegisterButton_Click" Background="BlueViolet" Foreground="#ECF0F1" BorderBrush="#2C3E50" Height="30" />
+                </StackPanel>
+            </StackPanel>
+        </Border>
+
+        <!-- Przycisk "Powrót" w lewym dolnym rogu -->
+        <Button Content="Powrót" Width="100" Background="#2C062C" Foreground="White" BorderThickness="0" Height="30" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10" Click="BackButton_Click"/>
+    </Grid>
+</Window>
